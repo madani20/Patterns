@@ -17,13 +17,6 @@ public class Caramel extends DecorateurIngredient{
         return boisson.getDescription() + ", Caramel";
     }
 
-    @Override
-    public Taille getTaille() {
-        return null;
-    }
-
-    @Override
-    public void setTaille(Taille taille) {
 
     }
-}
+
