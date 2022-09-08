@@ -2,7 +2,10 @@ package singleton;
 
 public class TestSingleton {
     public static void main(String[] args) throws InterruptedException {
-        Singleton instance=Singleton.getInstance();
-        instance.traiter();
+
+        for(int i=1;i<=5;i++) {
+            Task t=new Task("Tache " + i);
+            t.start();
+        }
     }
 }

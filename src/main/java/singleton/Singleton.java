@@ -2,7 +2,7 @@ package singleton;
 
 public class Singleton {
     private static volatile Singleton instance;
-
+    private int cpt=0;
     private Singleton(){System.out.println("Instanciation du singleton");};
 
     public static Singleton getInstance() {
@@ -15,11 +15,12 @@ public class Singleton {
         }
         return instance;
     }
-    public void traiter() throws InterruptedException {
-        System.out.println("Un traitement quelconque : ");
+    public void traiter(String str) throws InterruptedException {
         for(int i=0;i<5;i++){
-            System.out.println("traitement " + i);
+            System.out.println("traitement de la tache "+ str );
+            ++cpt;
             Thread.sleep(1000);
         }
+        System.out.println("compteur :........ " + cpt);
     }
 }
